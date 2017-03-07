@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<vxml version = "2.1" > 
+<var name="callerid" expr="session.callerid" /> 
+<form> 
+<record name="recording" maxtime="60s"> 
+<prompt xml:lang="ko-kr-female"> 
+안녕하세요 디비업 핀테크 서비스입니다. 
+</prompt> 
+<prompt xml:lang="ko-kr-female"> 
+요청하신 농협계좌 3 0 2 1 1 1 5 3 9 8 7 9 1 자동이체 신청을 하셨습니다. 동의하시면 "예"를 동의하지 않으시면 "아니오"를 말씀하세요. 
+</prompt> 
+
+<filled> 
+<field name="customer_type"> 
+<prompt xml:lang="ko-kr-female"> 
+<grammar xml:lang="ko-kr-female" root = "TOPLEVEL" mode="voice"> 
+<rule id="TOPLEVEL" scope="public"> 
+<one-of> 
+<item>예</item> 
+<item>아니오</item> 
+</one-of> 
+</rule> 
+</grammar> 
+</prompt> 
+</field> 
+</filled> 
+<filled> 
+<prompt xml:lang="ko-kr-female" cond="customer_type=='예'"> 
+자동이체 신청에 동의하셨습니다. 
+</prompt> 
+<prompt xml:lang="ko-kr-female" cond="customer_type=='아니오'"> 
+자동이체 신청에 동의하지 않았습니다. 
+</prompt> 
+</filled> 
+</record> 
+</form> 
+</vxml> 
