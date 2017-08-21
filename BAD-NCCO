@@ -1,0 +1,23 @@
+NCCO: {
+"to":[
+{ "type": "phone", "number": "16503889657" }
+],
+"from":
+{ "type": "phone", "number": "12672458681" }
+,
+"answer_url": ["https://dialer.chime.me/nexmo/callback/answer"]
+} answerURL NCCO: [
+{
+"action": "connect",
+"eventType": "synchronous",
+"eventUrl": ["https://dialer.chime.me/nexmo/callback/event"],
+"from":"16503889657",
+"machineDetection":"continue",
+"endpoint": [
+{ "type": "phone", "number": "8618511490710" }
+]
+},
+{ "action": "record", "eventUrl": ["https://dialer.chime.me/nexmo/callback/event/recording"] }
+,
+{ "action": "stream", "streamUrl": ["https://cdn.chime.me/doc/fs01/crm-lead/20170726/2/matyeQGn.mp3"], "loop": 1 }
+] 
