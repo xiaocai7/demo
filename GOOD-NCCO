@@ -1,0 +1,19 @@
+NCCO:  {
+"to":[
+{ "type": "phone", "number": "16503889657" }
+],
+"from":
+{ "type": "phone", "number": "12105190255" }
+,
+"answer_url": ["https://app.chime.me/nexmo/voice/answerUrl"]
+} answerURL NCCO： [
+{
+"action": "connect",
+"eventUrl": ["https://app.chime.me/nexmo/voice/statusChange"],
+"from":"12105190255",
+"endpoint": [
+{ "type": "phone", "number": "8618511490710" }
+]
+},
+{ "action": "record", "eventUrl": ["https://app.chime.me/nexmo/voice/record/complete"] }
+] 
